@@ -1,0 +1,30 @@
+# Datasets (licensed, not for redistribution)
+/data/
+/dtd/
+
+# Model checkpoints, weights, indices, cache
+**/checkpoints/
+**/snapshots/
+**/logs/
+**/*.pth
+**/*.pth.tar
+**/*.pckl
+**/*.ckpt
+**/*.faiss
+*.faiss
+nnscorer_search_index.faiss
+patchcore_params.pkl
+
+# Heavy run outputs (keep only the small metrics/csv/txt summaries manually)
+padim_run/results/**/weights/
+padim_run/results/**/images/
+patchcore-inspection/results_bottle/**/models/
+SimpleNet/results_bottle/**/models/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# OS / misc
+.DS_Store
