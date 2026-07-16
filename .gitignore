@@ -28,3 +28,4 @@ __pycache__/
 
 # OS / misc
 .DS_Store
+patchcore-inspection/.claude/
