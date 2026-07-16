@@ -13,10 +13,11 @@
 | PatchCore | 1.000 | 0.985 | ~99.6% | ~98.4% |
 | PaDiM | 0.998 | 0.981 | — | ~97.9% |
 | STFPM | 1.000 | 0.989 | — | ~97.0% |
-| SimpleNet | TBD | TBD | ~99.6% | — |
+| SimpleNet | 1.000 | 0.978 | ~99.6% | — |
 | DRAEM | TBD | TBD | ~98.1% | ~97.5% |
 
-Доп. метрика STFPM: PRO = 0.961 (per-region overlap, тоже считается репозиторием).
+Доп. метрики: STFPM PRO = 0.961, SimpleNet anomaly_pixel_auroc (PRO-подобная метрика) = 0.913
+(per-region overlap, тоже считаются репозиториями).
 
 ## Детали по моделям
 
@@ -38,7 +39,7 @@
 
 ### 4. SimpleNet
 - Репозиторий: `SimpleNet/` (DonaldRR/SimpleNet)
-- WideResNet50, 15 мета-эпох x 4 gan-эпохи (вместо 40x4 — сокращено для CPU), imagesize 224 (вместо 288)
+- WideResNet50, 10 мета-эпох x 4 gan-эпохи (вместо 40x4 — сокращено для CPU из-за дедлайна, после 2 неудачных попыток на 15), imagesize 224 (вместо 288)
 - Адаптации: `--gpu` default → CPU, `prefetch_factor` фикс для `num_workers=0`, `pandas.DataFrame.append` → `pd.concat`-совместимый код, `np.bool` → `bool`
 
 ### 5. DRAEM
